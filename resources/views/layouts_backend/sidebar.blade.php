@@ -3,12 +3,12 @@
     <!-- Start::main-sidebar-header -->
     <div class="main-sidebar-header">
         <a href="index.php" class="header-logo">
-            <img src="assets_back/images/brand-logos/desktop-logo.png" alt="logo" class="desktop-logo">
+            <img src="{{ asset('assets/image/catalog/ma_logo.png') }}" alt="logo" class="desktop-logo">
             <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-dark">
-            <img src="assets_back/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-dark">
+            <img src="{{ asset('assets/image/catalog/ma_logo.png') }}" alt="logo" class="desktop-dark">
             <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-logo">
             <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-white">
-            <img src="assets_back/images/brand-logos/desktop-dark.png" alt="logo" class="desktop-white">
+            <img src="{{ asset('assets/image/catalog/ma_logo.png') }}" alt="logo" class="desktop-white">
         </a>
     </div>
     <!-- End::main-sidebar-header -->
@@ -27,7 +27,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide mt-3">
-                    <a href="/" class="side-menu__item ">
+                    <a href="{{ route('dashboard') }}" class="side-menu__item ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 side-menu__icon">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -80,8 +80,8 @@
                         <i class="ri-arrow-right-s-line side-menu__angle"></i>
                     </a>
                     <ul class="slide-menu child1">
-                        <li class="slide side-menu__label1">
-                            <a href="javascript:void(0)">Utilisateurs</a>
+                        <li class="slide">
+                            <a href="{{ route('users.index') }}" class="side-menu__item active">Liste</a>
                         </li>
 
                     </ul>
@@ -90,7 +90,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide ">
-                    <a href="/" class="side-menu__item ">
+                    <a href="{{ route('user.profile') }}" class="side-menu__item ">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 side-menu__icon">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -98,7 +98,7 @@
                         </svg>
 
 
-                        <span class="side-menu__label">Parametrage</span>
+                        <span class="side-menu__label">Profile</span>
                     </a>
                 </li>
                 <!-- End::slide -->

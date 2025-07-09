@@ -12,7 +12,7 @@
                                     <div id="logo">
                                         <a
                                             href="#sectionhome"><img
-                                                src="assets/image/catalog/ma_logo.png" title="Cactuplan - Plant Store"
+                                                src="{{ asset('assets/image/catalog/ma_logo.png') }}" title="Cactuplan - Plant Store"
                                                 alt="Cactuplan - Plant Store" class="img-responsive" /></a>
                                     </div>
                                 </div>
@@ -23,86 +23,9 @@
                                         <span class="hidden-xs hidden-sm hidden-md">My Account</span><i
                                             class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right myaccount-menu">
-                                        <li><a
-                                                href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=account/register">Register</a>
-                                        </li>
-                                        <li><a
-                                                href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=account/login">Login</a>
-                                        </li>
-                                        <li><a href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=account/wishlist"
-                                                id="wishlist-total" title="Wish List (0)">Wish List (0)</a></li>
-                                        <li><a href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=checkout/cart"
-                                                title="Shopping Cart">Shopping Cart</a></li>
-                                        <li><a href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=checkout/checkout"
-                                                title="Checkout">Checkout</a></li>
-
-                                        <li class="lang-curr">
-                                            <div class="pull-left">
-                                                <form
-                                                    action="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=common/language/language"
-                                                    method="post" enctype="multipart/form-data" id="form-language">
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link">
-                                                            Language
-
-                                                            <img src="assets/image/catalog/language/en-gb/en-gb.png"
-                                                                alt="English" title="English">
-                                                        </button>
-                                                        <ul class="language-menu">
-                                                            <li>
-                                                                <button class="btn btn-link btn-block language-select"
-                                                                    type="button" name="en-gb"><img
-                                                                        src="assets/image/catalog/language/en-gb/en-gb.png"
-                                                                        alt="English" title="English" />
-                                                                    English</button>
-                                                            </li>
-                                                            <li>
-                                                                <button class="btn btn-link btn-block language-select"
-                                                                    type="button" name="ar">
-                                                                    <img src="assets/image/catalog/language/ar/ar.png"
-
-                                                                        alt="Arabic" title="Arabic" /> Arabic</button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <input type="hidden" name="code" value="" />
-                                                    <input type="hidden" name="redirect"
-                                                        value="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=common/home" />
-                                                </form>
-                                            </div>
-
-                                            <div class="pull-left">
-                                                <form
-                                                    action="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=common/currency/currency"
-                                                    method="post" enctype="multipart/form-data" id="form-currency">
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-link">
-                                                            Currency
-                                                            <strong>$</strong>
-
-                                                        </button>
-                                                        <ul class="currency-menu">
-                                                            <li>
-                                                                <button class="currency-select btn btn-link btn-block"
-                                                                    type="button" name="EUR">€</button>
-                                                            </li>
-                                                            <li>
-                                                                <button class="currency-select btn btn-link btn-block"
-                                                                    type="button" name="GBP">£</button>
-                                                            </li>
-                                                            <li>
-                                                                <button class="currency-select btn btn-link btn-block"
-                                                                    type="button" name="USD">$</button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <input type="hidden" name="code" value="" />
-                                                    <input type="hidden" name="redirect"
-                                                        value="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=common/home" />
-                                                </form>
-                                            </div>
-
-                                        </li>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
+                                       
+ 
                                     </ul>
                                 </div> 
                                 <div id="search" class="input-group">

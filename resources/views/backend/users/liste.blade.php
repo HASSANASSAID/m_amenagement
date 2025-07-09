@@ -12,7 +12,7 @@
                             <h1 class="page-title fw-medium fs-18 mb-0">Services</h1>
                         </div>
                         <div class="btn-list">
-                             <a href="{{ route('services.create') }}" class="btn btn-primary-light btn-wave">
+                             <a href="{{ route('users.create') }}" class="btn btn-primary-light btn-wave">
                                 <i class="ri-add-line align-middle me-1"></i> Ajouter
                             </a> 
                            
@@ -26,7 +26,7 @@
    <div class="card custom-card">
         <div class="card-header justify-content-between">
             <div class="card-title">
-                Liste des services
+                Liste des utilisateurs
             </div>
             <div class="d-flex gap-3 align-items-center flex-wrap">
                 <div class="btn-group">
@@ -53,74 +53,76 @@
             <table id="table-paginations" class="table table-bordered text-nowrap w-100 dataTable no-footer dtr-inline" aria-describedby="responsiveDataTable_info" style="width: 940px;">
                     <thead>
                         <tr>
-                            <th scope="col">Ref</th>
-                            <th scope="col">Titre</th>
-                            <th scope="col">Couleur</th>
-                            <th scope="col">Catégorie</th> 
+                            <th scope="col">id</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">email</th> 
                             <th scope="col">Status</th> 
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($services as $service)  
+                        @foreach($users as $key=> $user)  
                         <tr class="order-list">
-                            <td>{{$service->reference}}</td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <span class="avatar avatar-sm avatar-square bg-gray-300"><img src="{{ asset($service->emage) }}" class="w-100 h-100" alt="..."></span>
-                                    <div class="ms-2">
-                                        <p class="fw-medium mb-0 d-flex align-items-center"><a href="order-details.php"> {{$service->libelle}}</a></p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <span class="avatar avatar-sm me-2 avatar-rounded">
-                                        <img src="{{ asset(optional($service->color)->image) }}" alt="">
-                                    </span>{{optional($service->color)->libelle}}
-                                </div>
-                            </td>
-                            <td>   {{ optional($service->categorie)->libelle}}</td>                                             
-                            <td>
-                                @if($service->statut == 1)
+                            <td>{{$key +1}}</td>
+                            <td>{{$user->name}}</td>
+                            <td>{{$user->email}}</td>
+                                    <td>
+                                @if($user->etat == 1)
                                     <span class="badge bg-success-transparent">Active</span>
                                 @else
                                     <span class="badge bg-danger-transparent">Inactive</span>
                                 @endif 
                             
                             </td>
-                            
                             <td>
-                                <a href="{{ route('service.edit', ['service'=>$service->id]) }}" class="btn btn-icon btn-sm btn-warning-light btn-wave waves-effect waves-light">
+                                <!-- Modifier User Button -->
+                                <!-- Modifier User Button -->
+                                <button class="btn btn-icon btn-sm btn-warning-light btn-wave waves-effect waves-light" title="Modifier" data-bs-toggle="modal" data-bs-target="#editUserModal{{$user->id}}">
                                     <i class="ri-edit-line"></i>
-                                </a>
-                                <!-- Delete Button triggers modal -->
-                                <button type="button" class="order-delete-btn btn btn-icon btn-sm btn-danger-light btn-wave waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#deleteModal{{$service->id}}">
-                                    <i class="ri-delete-bin-line"></i>
                                 </button>
 
-                                <!-- Delete Confirmation Modal -->
-                                <div class="modal fade" id="deleteModal{{$service->id}}" tabindex="-1" aria-labelledby="deleteModalLabel{{$service->id}}" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="deleteModalLabel{{$service->id}}">Confirmation de suppression</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <!-- Edit User Modal -->
+                                <div class="modal fade" id="editUserModal{{$user->id}}" tabindex="-1" aria-labelledby="editUserModalLabel{{$user->id}}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <form action="{{ route('user.update') }}" method="POST">
+                                            @csrf 
+                                            <input type="hidden" name="id" value="{{ $user->id }}">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editUserModalLabel{{$user->id}}">Modifier Utilisateur</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="mb-3">
+                                                        <label for="name{{$user->id}}" class="form-label">Nom</label>
+                                                        <input type="text" class="form-control" id="name{{$user->id}}" name="nom" value="{{ $user->name }}" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="email{{$user->id}}" class="form-label">Email</label>
+                                                        <input type="email" class="form-control" id="email{{$user->id}}" name="email" value="{{ $user->email }}" required>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="password{{$user->id}}" class="form-label">Mot de passe</label>
+                                                        <input type="password" class="form-control" id="password{{$user->id}}" name="password" placeholder="Laissez vide pour ne pas changer">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="etat{{$user->id}}" class="form-label">Status</label>
+                                                        <select class="form-select" id="etat{{$user->id}}" name="etat" required>
+                                                            <option value="1" {{ $user->etat == 1 ? 'selected' : '' }}>Active</option>
+                                                            <option value="0" {{ $user->etat == 0 ? 'selected' : '' }}>Inactive</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                Voulez-vous vraiment supprimer ce service ?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                                <form action="{{ route('service.delete', ['service' => $service->id]) }}" method="POST" style="display:inline;">
-                                                    @csrf 
-                                                    <button type="submit" class="btn btn-danger">Supprimer</button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </div>
                             </td>
+                           
                         </tr> 
                         @endforeach
                     </tbody>

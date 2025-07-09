@@ -15,54 +15,54 @@
     <!-- Title -->
     <title>Catégories - Cash Manager</title>
     <!-- Favicon -->
-    <link rel="icon" href="assets_back/images/brand-logos/icon.png">
+    <link rel="icon" href="{{asset('assets_back/images/brand-logos/icon.png')}}">
 
     <!-- Start::Styles -->
 
     <!-- Choices JS -->
-    <script src="assets_back/libs/choices.js/publicassets_back/scripts/choices.min.js"></script>
+    <script src="{{asset('assets_back/libs/choices.js/publicassets_back/scripts/choices.min.js')}}"></script>
 
     <!-- Main Theme Js -->
-    <script src="assets_back/js/main.js"></script>
+    <script src="{{asset('assets_back/js/main.js')}}"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href="assets_back/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link id="style" href="{{asset('assets_back/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Style Css -->
-    <link href="assets_back/css/styles.css" rel="stylesheet">
+    <link href="{{asset('assets_back/css/styles.css')}}" rel="stylesheet">
 
     <!-- Icons Css -->
-    <link href="assets_back/css/icons.css" rel="stylesheet">
+    <link href="{{asset('assets_back/css/icons.css')}}" rel="stylesheet">
 
     <!-- Node Waves Css -->
-    <link href="assets_back/libs/node-waves/waves.min.css" rel="stylesheet">
+    <link href="{{asset('assets_back/libs/node-waves/waves.min.css')}}" rel="stylesheet">
 
     <!-- Simplebar Css -->
-    <link href="assets_back/libs/simplebar/simplebar.min.css" rel="stylesheet">
+    <link href="{{asset('assets_back/libs/simplebar/simplebar.min.css')}}" rel="stylesheet">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href="assets_back/libs/flatpickr/flatpickr.min.css">
-    <link rel="stylesheet" href="assets_back/libs/@simonwep/pickr/themes/nano.min.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/flatpickr/flatpickr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/@simonwep/pickr/themes/nano.min.css')}}">
 
     <!-- Choices Css -->
-    <link rel="stylesheet" href="assets_back/libs/choices.js/publicassets_back/styles/choices.min.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/choices.js/publicassets_back/styles/choices.min.css')}}">
 
     <!-- FlatPickr CSS -->
-    <link rel="stylesheet" href="assets_back/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/flatpickr/flatpickr.min.css')}}">
 
     <!-- Auto Complete CSS -->
-    <link rel="stylesheet" href="assets_back/libs/@tarekraafat/autocomplete.js/css/autoComplete.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/@tarekraafat/autocomplete.js/css/autoComplete.css')}}">
     <!-- End::Styles -->
 
     <!-- Sweetalert CSS -->
-    <link rel="stylesheet" href="assets_back/css/sweetalert2.css">
+    <link rel="stylesheet" href="{{asset('assets_back/css/sweetalert2.css')}}">
 
     <!-- Dropzone CSS -->
-    <link rel="stylesheet" href="assets_back/libs/dropzone/dropzone.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/dropzone/dropzone.css')}}">
 
     <!-- Quill editor Css -->
-    <link rel="stylesheet" href="assets_back/libs/quill/quill.snow.css">
-    <link rel="stylesheet" href="assets_back/libs/quill/quill.bubble.css">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/quill/quill.snow.css')}}">
+    <link rel="stylesheet" href="{{asset('assets_back/libs/quill/quill.bubble.css')}}">
 
 
 </head>
@@ -73,7 +73,7 @@
 
     <!-- Loader -->
     <div id="loader">
-        <img src="assets_back/images/media/loader.svg" alt="">
+        <img src="{{asset('assets_back/images/media/loader.svg')}}" alt="">
     </div>
     <!-- Loader -->
 
@@ -91,14 +91,14 @@
                     <div class="header-element">
                         <div class="horizontal-logo">
                             <a href="index.php" class="header-logo">
-                                <img src="assets_back/images/brand-logos/desktop-logo.png" alt="logo"
+                                <img src="{{asset('assets_back/images/brand-logos/desktop-logo.png')}}" alt="logo"
                                     class="desktop-logo">
-                                <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-dark">
-                                <img src="assets_back/images/brand-logos/desktop-dark.png" alt="logo"
+                                <img src="{{asset('assets_back/images/brand-logos/toggle.png')}}" alt="logo" class="toggle-dark">
+                                <img src="{{asset('assets_back/images/brand-logos/desktop-dark.png')}}" alt="logo"
                                     class="desktop-dark">
-                                <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-logo">
-                                <img src="assets_back/images/brand-logos/toggle.png" alt="logo" class="toggle-white">
-                                <img src="assets_back/images/brand-logos/desktop-dark.png" alt="logo"
+                                <img src="{{asset('assets_back/images/brand-logos/toggle.png')}}" alt="logo" class="toggle-logo">
+                                <img src="{{asset('assets_back/images/brand-logos/toggle.png')}}" alt="logo" class="toggle-white">
+                                <img src="{{asset('assets_back/images/brand-logos/desktop-dark.png')}}" alt="logo"
                                     class="desktop-white">
                             </a>
                         </div>
@@ -162,7 +162,7 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                                <img src="assets_back/images/flags/us_flag.jpg" alt="img">
+                                                <img src="{{asset('assets_back/images/flags/us_flag.jpg')}}" alt="img">
                                             </span>
                                             English
                                         </div>
@@ -172,7 +172,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/spain_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/spain_flag.jpg')}}" alt="img">
                                     </span>
                                     español
                                 </a>
@@ -180,7 +180,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/french_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/french_flag.jpg')}}" alt="img">
                                     </span>
                                     français
                                 </a>
@@ -188,7 +188,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/uae_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/uae_flag.jpg')}}" alt="img">
                                     </span>
                                     عربي
                                 </a>
@@ -196,7 +196,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/germany_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/germany_flag.jpg')}}" alt="img">
                                     </span>
                                     Deutsch
                                 </a>
@@ -204,7 +204,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/china_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/china_flag.jpg')}}" alt="img">
                                     </span>
                                     中国人
                                 </a>
@@ -212,7 +212,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/italy_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/italy_flag.jpg')}}" alt="img">
                                     </span>
                                     Italiano
                                 </a>
@@ -220,7 +220,7 @@
                             <li>
                                 <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);">
                                     <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                        <img src="assets_back/images/flags/russia_flag.jpg" alt="img">
+                                        <img src="{{asset('assets_back/images/flags/russia_flag.jpg')}}" alt="img">
                                     </span>
                                     Русский
                                 </a>
@@ -286,7 +286,7 @@
                             data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    <img src="assets_back/images/faces/15.jpg" alt="img"
+                                    <img src="{{asset('assets_back/images/faces/15.jpg')}}" alt="img"
                                         class="avatar custom-header-avatar avatar-rounded">
                                 </div>
                             </div>
@@ -297,18 +297,25 @@
                             <li>
                                 <div class="dropdown-item text-center border-bottom">
                                     <span class="fw-medium">
-                                        Zaynab Oubenali
+                                        {{ auth()->user()->name }}
                                     </span>
                                     <span class="d-block fs-12 text-muted">
-                                        Gérant
+                                        Admin
                                     </span>
                                 </div>
                             </li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="profile.php"><i
+                            <li><a class="dropdown-item d-flex align-items-center" href="{{ route('user.profile') }}"><i
                                         class="ri-user-line lh-1 p-1 rounded-circle bg-primary-transparent text-primary me-2 fs-14"></i>Profile</a>
                             </li>
-                            <li><a class="dropdown-item d-flex align-items-center" href="/logout"><i
-                                        class="ri-door-lock-line lh-1 p-1 rounded-circle bg-primary-transparent text-primary me-2 fs-14"></i>Déconnexion</a>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="ri-door-lock-line lh-1 p-1 rounded-circle bg-primary-transparent text-primary me-2 fs-14"></i>
+                                    Déconnexion
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
                     </li>
@@ -443,55 +450,55 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Popper JS -->
-    <script src="assets_back/libs/@popperjs/core/umd/popper.min.js"></script>
+    <script src="{{asset('assets_back/libs/@popperjs/core/umd/popper.min.js')}}"></script>
 
     <!-- Bootstrap JS -->
-    <script src="assets_back/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('assets_back/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Defaultmenu JS -->
-    <script src="assets_back/js/defaultmenu.min.js"></script>
+    <script src="{{asset('assets_back/js/defaultmenu.min.js')}}"></script>
 
     <!-- Node Waves JS-->
-    <script src="assets_back/libs/node-waves/waves.min.js"></script>
+    <script src="{{asset('assets_back/libs/node-waves/waves.min.js')}}"></script>
 
     <!-- Sticky JS -->
-    <script src="assets_back/js/sticky.js"></script>
+    <script src="{{asset('assets_back/js/sticky.js')}}"></script>
 
     <!-- Simplebar JS -->
-    <script src="assets_back/libs/simplebar/simplebar.min.js"></script>
-    <script src="assets_back/js/simplebar.js"></script>
+    <script src="{{asset('assets_back/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{asset('assets_back/js/simplebar.js')}}"></script>
 
     <!-- Auto Complete JS -->
-    <script src="assets_back/libs/@tarekraafat/autocomplete.js/autoComplete.min.js"></script>
+    <script src="{{asset('assets_back/libs/@tarekraafat/autocomplete.js/autoComplete.min.js')}}"></script>
 
     <!-- Color Picker JS -->
-    <script src="assets_back/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="{{asset('assets_back/libs/@simonwep/pickr/pickr.es5.min.js')}}"></script>
 
     <!-- Date & Time Picker JS -->
-    <script src="assets_back/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="{{asset('assets_back/libs/flatpickr/flatpickr.min.js')}}"></script>
     <!-- End::main-scripts -->
 
 
     <!-- Orders JS -->
-    <script src="assets_back/js/orders.js"></script>
+    <script src="{{asset('assets_back/js/orders.js')}}"></script>
 
     <!-- Apex Charts JS -->
-    <script src="assets_back/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{asset('assets_back/libs/apexcharts/apexcharts.min.js')}}"></script>
 
     <!-- Echarts JS -->
-    <script src="assets_back/libs/echarts/echarts.min.js"></script>
+    <script src="{{asset('assets_back/libs/echarts/echarts.min.js')}}"></script>
 
     <!-- Ecommerce Dashboard -->
-    <script src="assets_back/js/ecommerce-dashboard.js"></script>
+    <script src="{{asset('assets_back/js/ecommerce-dashboard.js')}}"></script>
 
     <!-- Sweetalert JS -->
-    <script src="assets_back/js/sweet-alert/sweetalert2.min.js"></script>
+    <script src="{{asset('assets_back/js/sweet-alert/sweetalert2.min.js')}}"></script>
 
     <!-- Custom JS -->
-    <script src="assets_back/js/custom.js"></script>
+    <script src="{{asset('assets_back/js/custom.js')}}"></script>
 
     <!-- Custom-Switcher JS -->
-    <script src="assets_back/js/custom-switcher.min.js"></script>
+    <script src="{{asset('assets_back/js/custom-switcher.min.js')}}"></script>
 
 
     <!-- Pagination table -->

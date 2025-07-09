@@ -1,7 +1,10 @@
  
 @extends('layouts.app')
 <style>
-    
+    .product-thumb .product-thumb .imaage {
+        width: 100%;
+        height: 100%;
+    }
 </style>
   
 
@@ -140,9 +143,9 @@
                             <div class="hometab-heading box-heading">service d’aménagement maison professionnel</div>
                             <div id="categorytabs" class="htabs">
                                 <ul class="etabs">
-                                    <li class="tab"><a href="#categorytab-31" data-toggle="tab">lumière</a></li>
-                                    <li class="tab"><a href="#categorytab-25" data-toggle="tab">milieu </a></li>
                                     <li class="tab"><a href="#categorytab-33" data-toggle="tab">Sombre</a></li>
+                                    <li class="tab"><a href="#categorytab-25" data-toggle="tab">milieu </a></li>
+                                    <li class="tab"><a href="#categorytab-31" data-toggle="tab">lumière</a></li>
                                    
                                 </ul>
                             </div>
@@ -196,7 +199,7 @@
                                                     <div class="product-details">
                                                         <div class="caption">
                                                             <h4><a
-                                                                    href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=product/product&amp;product_id=47 "><br>
+                                                                    href="# "><br>
                                                                     SURFACE LAQUÉE MATE SUPRAMAT<br>3016
 
 
@@ -1383,12 +1386,13 @@
 
                                 <div class="box-product  productbox-grid" id="tabcategory0-grid">
                                     @foreach($services_inter as $service)  
+                                    <!-- @dump($service->id) -->
                                         <div class="product-items">
                                             <div class="product-block product-thumb">
                                                 <div class="product-block-inner">
                                                     <div class="image">
                                                         <a
-                                                            href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=product/product&amp;product_id=47">
+                                                            href="#">
                                                             <img src="{{ asset(optional($service->color)->image) }}"
                                                                 title="Accusantium Doloremque"
                                                                 alt="Accusantium Doloremque" class="img-responsive" />
@@ -1421,7 +1425,7 @@
                                                     <div class="product-details">
                                                         <div class="caption">
                                                             <h4><a
-                                                                    href="https://codezeel.com/opencart/OPC02/OPC020044/index.php?route=product/product&amp;product_id=47 ">{{optional($service->color)->libelle}}<br>
+                                                                    href="# ">{{optional($service->color)->libelle}}<br>
                                                                     {{$service->libelle}}<br>{{$service->reference}}
 
 

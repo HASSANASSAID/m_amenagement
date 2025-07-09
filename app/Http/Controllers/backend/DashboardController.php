@@ -24,10 +24,13 @@ class DashboardController extends Controller
      */
     public function index()
     { 
-        $services = Service::get();
+        $services = Service::count();
+        $users = User::count();
+        
         
         return view('backend.home', [
             'services' => $services, 
+            'users' => $users,
         ]);
     }
 }
