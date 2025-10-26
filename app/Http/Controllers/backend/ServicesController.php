@@ -132,6 +132,7 @@ class ServicesController extends Controller
             $service->statut = $request->statut ; // Assuming you want to set the status to active by default
 
 
+
         if ($request->hasFile('image')) {
             $imageName = time().'.'.$request->image->extension();  
             $request->image->move(public_path('assets/image/amenagment_img'), $imageName);
